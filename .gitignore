@@ -1,0 +1,15 @@
+# Ignore Terraform build directories and related files
+.terraform/
+*.tfstate
+*.tfstate.backup
+.terraform.lock.hcl
+
+# Ignore IDE directories
+.idea/
+__pycache__/
+
+# Ignore Python venv directory
+venv/
+
+# Ignore the zip file that's created as part of the Terraform build
+lambda_redirect.zip
