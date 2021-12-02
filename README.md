@@ -5,7 +5,7 @@ A simple Terraform+Python demo showing how to serve HTTP redirects using AWS API
 Check out my Medium article for the full write-up
 
 ### Architecture Diagram
-[Architecture diagram for this project](docs/architecture_diagram.jpg)
+![Architecture diagram for this project](docs/architecture_diagram.jpg)
 
 ### Purpose
 An example of how to set up a simple API Gateway with Lambda integration to redirect user traffic to another website or host.
