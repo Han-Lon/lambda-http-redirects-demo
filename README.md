@@ -23,12 +23,12 @@ This can be useful for a number of reasons, including tracking user traffic, kic
 - This will launch a **public** API-- while it isn't integrated with any other services in your AWS account and will not allow an attacker to hijack your account/resources, it's still a good idea to minimize threat (and cost) by cleaning up these demo resources after you're done
 
 ### How to run
-- `cd <this_directory>`
+- `cd <this_directory>/terraform/`
 - `terraform init`
 - [Optional] `terraform plan` to vet infrastructure deployment
 - `terraform apply` - enter "yes" to confirm deployment
 
 ### How to clean up
-- `cd <this_directory>`
+- `cd <this_directory>/terraform/`
 - `terraform destroy` -  entery "yes" to confirm destruction
 - Ensure the above command executes successfully with no errors. Then you're safe to delete anything/everything in this directory
