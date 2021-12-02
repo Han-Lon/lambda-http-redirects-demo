@@ -1,8 +1,10 @@
+# Create a new HTTP API
 resource "aws_apigatewayv2_api" "redirect-api" {
   name = "example-redirect-api"
   protocol_type = "HTTP"
 }
 
+# Set up an integration between our HTTP API and the redirect Lambda
 resource "aws_apigatewayv2_integration" "redirect-api-integration" {
   api_id = aws_apigatewayv2_api.redirect-api.id
   integration_type = "AWS_PROXY"
@@ -13,6 +15,7 @@ resource "aws_apigatewayv2_integration" "redirect-api-integration" {
   integration_uri = aws_lambda_function.redirect-lambda-function.invoke_arn
 }
 
+# Set up a route in API Gateway to expect traffic on, and redirect said traffic to the redirect Lambda
 resource "aws_apigatewayv2_route" "redirect-api-route" {
   api_id = aws_apigatewayv2_api.redirect-api.id
   route_key = "GET /redirect/{proxy+}"
