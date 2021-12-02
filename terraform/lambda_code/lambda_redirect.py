@@ -5,6 +5,7 @@ from urllib import parse
 
 def lambda_handler(event, context):
     print(f"Event submitted to the Lambda: {event}")
+
     # Get the site we want to redirect to from the "proxy" part of the submitted URL (from API Gateway). Use urllib to escape URL-unfriendly characters
     redirect_site = parse.quote(event["pathParameters"]["proxy"])
 
